@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restaurant Istanbul Dreux | Cuisine turque et méditerranéenne</title>
+  <meta name="description" content="Découvrez Istanbul à Dreux : kebabs, lahmacuns, grillades et spécialités turques au 3 rue Saint-Thibault, 28100 Dreux.">
+  <meta name="keywords" content="Restaurant Istanbul Dreux, cuisine turque Dreux, kebab Dreux, grillades Dreux, lahmacun Dreux, restaurant méditerranéen Dreux, réserver restaurant Dreux">
+  <meta name="author" content="Restaurant Istanbul Dreux">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="restaurant">
+  <meta property="og:title" content="Restaurant Istanbul Dreux | Cuisine turque et méditerranéenne">
+  <meta property="og:description" content="Découvrez Istanbul à Dreux : kebabs, lahmacuns, grillades et spécialités turques au 3 rue Saint-Thibault, 28100 Dreux.">
+  <meta property="og:url" content="https://restaurant-istanbul-dreux.fr/">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=1200&q=80">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Restaurant Istanbul Dreux | Cuisine turque et méditerranéenne">
+  <meta name="twitter:description" content="Découvrez Istanbul à Dreux : kebabs, lahmacuns, grillades et spécialités turques au 3 rue Saint-Thibault, 28100 Dreux.">
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=1200&q=80">
+
+  <!-- Google Fonts Preconnect & Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "Restaurant Istanbul",
+    "image": "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=1200&q=80",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "3 rue Saint-Thibault",
+      "addressLocality": "Dreux",
+      "postalCode": "28100",
+      "addressCountry": "FR"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 48.7369,
+      "longitude": 1.3672
+    },
+    "url": "https://restaurant-istanbul-dreux.fr/",
+    "servesCuisine": ["Turkish", "Mediterranean", "Grillades", "Halal"],
+    "priceRange": "€€",
+    "hasMenu": "https://restaurant-istanbul-dreux.fr/#menu"
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Top Sticky Navigation -->
+  <header class="site-header" id="header">
+    <div class="nav-container">
+      <a href="#accueil" class="brand-link" aria-label="Restaurant Istanbul - Accueil">
+        <span class="brand-title">ISTANBUL</span>
+        <span class="brand-subtitle" data-i18n="nav.subtitle">Cuisine Turque · Dreux</span>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="main-nav" id="main-nav" aria-label="Navigation principale">
+        <ul class="nav-links">
+          <li><a href="#accueil" class="nav-link active" data-i18n="nav.home">Accueil</a></li>
+          <li><a href="#cuisine" class="nav-link" data-i18n="nav.cuisine">Notre cuisine</a></li>
+          <li><a href="#menu" class="nav-link" data-i18n="nav.menu">Menu</a></li>
+          <li><a href="#galerie" class="nav-link" data-i18n="nav.gallery">Galerie</a></li>
+          <li><a href="#reservation" class="nav-link" data-i18n="nav.reservation">Réservation</a></li>
+          <li><a href="#contact" class="nav-link" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Right Header Actions -->
+      <div class="nav-actions">
+        <!-- Language Switcher -->
+        <div class="lang-switcher" role="group" aria-label="Sélection de langue / Language selector">
+          <button type="button" class="lang-btn active" id="btn-lang-fr" aria-label="Passer en français" aria-pressed="true">FR</button>
+          <span class="lang-divider" aria-hidden="true">|</span>
+          <button type="button" class="lang-btn" id="btn-lang-en" aria-label="Switch to English" aria-pressed="false">EN</button>
+        </div>
+
+        <!-- Find Us Link -->
+        <a href="#contact" class="find-us-link" data-i18n="nav.findUs">Nous trouver</a>
+
+        <!-- Reservation CTA Button -->
+        <a href="#reservation" class="btn btn-terracotta nav-cta" data-i18n="nav.bookTable">Réserver une table</a>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button type="button" class="mobile-toggle" id="mobile-toggle" aria-expanded="false" aria-controls="mobile-drawer" aria-label="Ouvrir le menu de navigation">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Navigation -->
+    <div class="mobile-drawer" id="mobile-drawer" aria-hidden="true">
+      <ul class="mobile-nav-links">
+        <li><a href="#accueil" class="mobile-nav-link" data-i18n="nav.home">Accueil</a></li>
+        <li><a href="#cuisine" class="mobile-nav-link" data-i18n="nav.cuisine">Notre cuisine</a></li>
+        <li><a href="#menu" class="mobile-nav-link" data-i18n="nav.menu">Menu</a></li>
+        <li><a href="#galerie" class="mobile-nav-link" data-i18n="nav.gallery">Galerie</a></li>
+        <li><a href="#reservation" class="mobile-nav-link" data-i18n="nav.reservation">Réservation</a></li>
+        <li><a href="#contact" class="mobile-nav-link" data-i18n="nav.contact">Contact</a></li>
+      </ul>
+      <div class="mobile-drawer-footer">
+        <a href="#reservation" class="btn btn-terracotta mobile-cta-btn" data-i18n="nav.bookTable">Réserver une table</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- 1. Hero Section -->
+    <section class="hero-section" id="accueil" aria-labelledby="hero-heading">
+      <div class="hero-container">
+        <div class="hero-content">
+          <p class="hero-eyebrow" data-i18n="hero.eyebrow">DREUX · CUISINE TURQUE & MÉDITERRANÉENNE</p>
+          <h1 class="hero-heading" id="hero-heading" data-i18n="hero.heading">
+            Un voyage de saveurs.<br>Au cœur de Dreux.
+          </h1>
+          <p class="hero-description" data-i18n="hero.description">
+            « Des grillades généreuses aux incontournables de la cuisine turque, découvrez une cuisine conviviale inspirée par le goût du partage et les traditions méditerranéennes. »
+          </p>
+          
+          <div class="hero-actions">
+            <a href="#menu" class="btn btn-secondary" data-i18n="hero.btnMenu">Découvrir la carte</a>
+            <a href="#reservation" class="btn btn-terracotta" data-i18n="hero.btnBook">Réserver une table</a>
+          </div>
+
+          <div class="hero-meta">
+            <span class="hero-address">
+              <svg class="meta-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              <span data-i18n="hero.address">3 rue Saint-Thibault · 28100 Dreux</span>
+            </span>
+            <span class="hero-meta-divider" aria-hidden="true">•</span>
+            <span class="hero-tag" data-i18n="hero.tag">Fait maison & Viandes grillées</span>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="hero-image-card">
+            <img 
+              src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=1200&q=80" 
+              alt="Assortiment de viandes grillées au feu de bois et spécialités méditerranéennes au Restaurant Istanbul Dreux" 
+              class="hero-img"
+              width="640" 
+              height="480"
+              fetchpriority="high"
+            >
+            <div class="hero-caption">
+              <span class="caption-dot"></span>
+              <span data-i18n="hero.caption">Spécialités de grillades au feu & cuisine artisanale au quotidien.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. Restaurant Introduction (L'Esprit Istanbul) -->
+    <section class="intro-section" id="cuisine" aria-labelledby="intro-heading">
+      <div class="section-container intro-grid">
+        <div class="intro-media">
+          <div class="intro-image-wrapper">
+            <img 
+              src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=900&q=80" 
+              alt="Préparation soignée des grillades traditionnelles turques au Restaurant Istanbul" 
+              class="intro-img"
+              loading="lazy"
+              width="500" 
+              height="600"
+            >
+            <div class="intro-accent-badge">
+              <span class="badge-num">100%</span>
+              <span class="badge-text" data-i18n="intro.badgeText">Saveurs Méditerranéennes</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="intro-content">
+          <div class="accent-line" aria-hidden="true"></div>
+          <span class="section-eyebrow" data-i18n="intro.label">L'ESPRIT ISTANBUL</span>
+          <h2 class="section-title" id="intro-heading" data-i18n="intro.heading">
+            Le goût du partage, la générosité en plus.
+          </h2>
+          <p class="intro-lead" data-i18n="intro.description">
+            « Chez Istanbul, retrouvez les grands classiques de la cuisine turque et méditerranéenne dans un cadre chaleureux. Kebabs, lahmacun et grillades composent une cuisine généreuse, idéale pour un repas en famille ou entre amis. »
+          </p>
+
+          <div class="intro-features">
+            <div class="feature-item">
+              <div class="feature-icon-wrapper">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>
+              </div>
+              <div class="feature-text">
+                <h3 data-i18n="intro.feat1Title">Recettes Authentiques</h3>
+                <p data-i18n="intro.feat1Desc">Des marinades équilibrées aux herbes fraîches et épices d'Anatolie.</p>
+              </div>
+            </div>
+
+            <div class="feature-item">
+              <div class="feature-icon-wrapper">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+              </div>
+              <div class="feature-text">
+                <h3 data-i18n="intro.feat2Title">Sur Place & À Emporter</h3>
+                <p data-i18n="intro.feat2Desc">Dégustez dans une ambiance conviviale ou commandez pour chez vous.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="intro-cta-wrapper">
+            <a href="#menu" class="btn btn-secondary" data-i18n="intro.btnExplore">Explorer notre carte</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Why Restaurant Istanbul (3 Minimalist Columns) -->
+    <section class="values-section" aria-label="Pourquoi choisir Restaurant Istanbul">
+      <div class="section-container">
+        <div class="values-grid">
+          <div class="value-card">
+            <div class="value-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+            </div>
+            <h3 class="value-title" data-i18n="values.item1Title">Authenticité</h3>
+            <p class="value-desc" data-i18n="values.item1Desc">Les grands classiques de la cuisine turque et méditerranéenne préparés selon le savoir-faire traditionnel.</p>
+          </div>
+
+          <div class="value-card">
+            <div class="value-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="M8 14s1.5 2 4 2 4-2 4-2"></path><line x1="9" y1="9" x2="9.01" y2="9"></line><line x1="15" y1="9" x2="15.01" y2="9"></line></svg>
+            </div>
+            <h3 class="value-title" data-i18n="values.item2Title">Générosité</h3>
+            <p class="value-desc" data-i18n="values.item2Desc">Des spécialités gourmandes et des assiettes copieuses pour profiter pleinement de chaque repas.</p>
+          </div>
+
+          <div class="value-card">
+            <div class="value-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+            </div>
+            <h3 class="value-title" data-i18n="values.item3Title">Convivialité</h3>
+            <p class="value-desc" data-i18n="values.item3Desc">Une adresse accueillante au centre de Dreux pour se retrouver en famille ou entre amis.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Menu & Signature Dishes (Six Interactive Categories) -->
+    <section class="menu-section" id="menu" aria-labelledby="menu-heading">
+      <div class="section-container">
+        <div class="section-header text-center">
+          <div class="accent-line mx-auto" aria-hidden="true"></div>
+          <span class="section-eyebrow" data-i18n="menu.eyebrow">LA CARTE DU RESTAURANT</span>
+          <h2 class="section-title" id="menu-heading" data-i18n="menu.title">
+            Notre carte &amp; nos spécialités
+          </h2>
+          <p class="section-subtitle" data-i18n="menu.subtitle">
+            Retrouvez tous nos plats préparés à la commande. Des viandes sélectionnées, des pains cuits et des garnitures parfumées.
+          </p>
+        </div>
+
+        <!-- Formula Notification Banner -->
+        <div class="menu-notice-card" role="note">
+          <div class="notice-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+          </div>
+          <div class="notice-text">
+            <strong data-i18n="menu.noticeTitle">Formules &amp; Accompagnements :</strong>
+            <span data-i18n="menu.noticeDesc">Tous nos Sandwichs en Menu sont servis avec Frites et Boisson 33 cl. Nos Assiettes sont servies avec frites, boulgour et riz.</span>
+          </div>
+        </div>
+
+        <!-- Six Interactive Category Tabs -->
+        <div class="menu-tabs-wrapper" role="tablist" aria-label="Catégories du menu">
+          <button type="button" class="menu-tab-btn active" role="tab" id="tab-kebabs" aria-selected="true" aria-controls="menu-grid" data-category="kebabs">
+            <span class="tab-label" data-i18n="menu.cat1">Kebabs &amp; Sandwichs</span>
+          </button>
+          <button type="button" class="menu-tab-btn" role="tab" id="tab-grillades" aria-selected="false" aria-controls="menu-grid" data-category="grillades">
+            <span class="tab-label" data-i18n="menu.cat2">Grillades</span>
+          </button>
+          <button type="button" class="menu-tab-btn" role="tab" id="tab-assiettes" aria-selected="false" aria-controls="menu-grid" data-category="assiettes">
+            <span class="tab-label" data-i18n="menu.cat3">Assiettes Complètes</span>
+          </button>
+          <button type="button" class="menu-tab-btn" role="tab" id="tab-lahmacun" aria-selected="false" aria-controls="menu-grid" data-category="lahmacun">
+            <span class="tab-label" data-i18n="menu.cat4">Lahmacun &amp; Pains Turcs</span>
+          </button>
+          <button type="button" class="menu-tab-btn" role="tab" id="tab-vegetarien" aria-selected="false" aria-controls="menu-grid" data-category="vegetarien">
+            <span class="tab-label" data-i18n="menu.cat5">Végétarien &amp; Accompagnements</span>
+          </button>
+          <button type="button" class="menu-tab-btn" role="tab" id="tab-desserts" aria-selected="false" aria-controls="menu-grid" data-category="desserts">
+            <span class="tab-label" data-i18n="menu.cat6">Desserts &amp; Boissons</span>
+          </button>
+        </div>
+
+        <!-- Dynamic Menu Items Container -->
+        <div class="menu-grid" id="menu-grid" role="tabpanel" aria-live="polite">
+          <!-- Populated dynamically via JavaScript with smooth transitions -->
+        </div>
+
+        <!-- Supplements & Special Offers Sub-box -->
+        <div class="menu-extras-box">
+          <div class="extra-col">
+            <h3 class="extra-title" data-i18n="menu.childTitle">Offre spéciale — Menu Enfant</h3>
+            <p class="extra-desc" data-i18n="menu.childDesc">Sandwich + frite + boisson (uniquement le midi)</p>
+            <span class="extra-price">9.00 €</span>
+          </div>
+          <div class="extra-divider" aria-hidden="true"></div>
+          <div class="extra-col">
+            <h3 class="extra-title" data-i18n="menu.suppTitle">Suppléments à la demande</h3>
+            <ul class="extra-list">
+              <li><span data-i18n="menu.suppCheese">Fromage</span> <strong>+0.50 €</strong></li>
+              <li><span data-i18n="menu.suppFries">Frites</span> <strong>+0.50 €</strong></li>
+              <li><span data-i18n="menu.suppMeat">Viande</span> <strong>+1.00 €</strong></li>
+              <li><span data-i18n="menu.suppMixte">Assiette Mixte (viande supp.)</span> <strong>+3.00 €</strong></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Bottom Menu CTA -->
+        <div class="menu-cta-area text-center">
+          <a href="#reservation" class="btn btn-terracotta" data-i18n="menu.bookCta">Réserver une table</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Editorial Food Photography Showcase -->
+    <section class="showcase-section" aria-labelledby="showcase-heading">
+      <div class="showcase-container">
+        <div class="showcase-card">
+          <div class="showcase-overlay"></div>
+          <div class="showcase-content">
+            <span class="showcase-eyebrow" data-i18n="showcase.eyebrow">SAVEURS &amp; TRADITIONS</span>
+            <h2 class="showcase-title" id="showcase-heading" data-i18n="showcase.title">
+              De belles assiettes. Des saveurs généreuses.
+            </h2>
+            <p class="showcase-quote" data-i18n="showcase.quote">
+              « Le plaisir d'une cuisine inspirée des traditions turques, à partager au cœur de Dreux. »
+            </p>
+            <div class="showcase-badges">
+              <span class="pill-badge" data-i18n="showcase.badge1">Viandes Marinées</span>
+              <span class="pill-badge" data-i18n="showcase.badge2">Boulgour &amp; Riz Parfumés</span>
+              <span class="pill-badge" data-i18n="showcase.badge3">Pains &amp; Lahmacun Minute</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Interactive Photo Gallery with Lightbox -->
+    <section class="gallery-section" id="galerie" aria-labelledby="gallery-heading">
+      <div class="section-container">
+        <div class="section-header text-center">
+          <div class="accent-line mx-auto" aria-hidden="true"></div>
+          <span class="section-eyebrow" data-i18n="gallery.eyebrow">IMMERSION CULINAIRE</span>
+          <h2 class="section-title" id="gallery-heading" data-i18n="gallery.title">
+            Galerie de nos spécialités
+          </h2>
+          <p class="section-subtitle" data-i18n="gallery.subtitle">
+            Un aperçu en images de nos grillades, assiettes et douceurs traditionnelles. Cliquez sur une photo pour l'agrandir.
+          </p>
+        </div>
+
+        <!-- Asymmetric Photo Grid -->
+        <div class="gallery-grid" id="gallery-grid">
+          <figure class="gallery-item item-large" tabindex="0" role="button" aria-haspopup="dialog" data-index="0" aria-label="Agrandir la photo : Assortiment de grillades mixtes">
+            <img 
+              src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=900&q=80" 
+              alt="Assortiment de viandes grillées avec frites, boulgour et légumes braisés" 
+              class="gallery-thumb"
+              loading="lazy"
+            >
+            <figcaption class="gallery-overlay">
+              <span class="gallery-label" data-i18n="gallery.img1Title">Grillades Mixtes &amp; Spécialités</span>
+              <span class="gallery-sub" data-i18n="gallery.clickZoom">Cliquer pour agrandir</span>
+            </figcaption>
+          </figure>
+
+          <figure class="gallery-item" tabindex="0" role="button" aria-haspopup="dialog" data-index="1" aria-label="Agrandir la photo : Kebab traditionnel artisanal">
+            <img 
+              src="https://images.unsplash.com/photo-1561651823-34feb02250e4?auto=format&fit=crop&w=600&q=80" 
+              alt="Sandwich kebab servi dans un pain moelleux garni de crudités fraîches" 
+              class="gallery-thumb"
+              loading="lazy"
+            >
+            <figcaption class="gallery-overlay">
+              <span class="gallery-label" data-i18n="gallery.img2Title">Kebab Artisanal en Pain Frais</span>
+              <span class="gallery-sub" data-i18n="gallery.clickZoom">Cliquer pour agrandir</span>
+            </figcaption>
+          </figure>
+
+          <figure class="gallery-item" tabindex="0" role="button" aria-haspopup="dialog" data-index="2" aria-label="Agrandir la photo : Lahmacun traditionnel croustillant">
+            <img 
+              src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=600&q=80" 
+              alt="Fine pizza turque lahmacun garnie de viande émincée, citron et herbes" 
+              class="gallery-thumb"
+              loading="lazy"
+            >
+            <figcaption class="gallery-overlay">
+              <span class="gallery-label" data-i18n="gallery.img3Title">Lahmacun Croustillant au Citron</span>
+              <span class="gallery-sub" data-i18n="gallery.clickZoom">Cliquer pour agrandir</span>
+            </figcaption>
+          </figure>
+
+          <figure class="gallery-item" tabindex="0" role="button" aria-haspopup="dialog" data-index="3" aria-label="Agrandir la photo : Côtelettes d'agneau et brochettes">
+            <img 
+              src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=600&q=80" 
+              alt="Côtelettes d'agneau grillées à la braise marinées aux herbes méditerranéennes" 
+              class="gallery-thumb"
+              loading="lazy"
+            >
+            <figcaption class="gallery-overlay">
+              <span class="gallery-label" data-i18n="gallery.img4Title">Côtelettes d'Agneau Grillées</span>
+              <span class="gallery-sub" data-i18n="gallery.clickZoom">Cliquer pour agrandir</span>
+            </figcaption>
+          </figure>
+
+          <figure class="gallery-item" tabindex="0" role="button" aria-haspopup="dialog" data-index="4" aria-label="Agrandir la photo : Baklawa feuilleté traditionnel">
+            <img 
+              src="https://images.unsplash.com/photo-1519869325930-281384150729?auto=format&fit=crop&w=600&q=80" 
+              alt="Baklawa turc feuilleté croustillant aux pistaches vertes et miel" 
+              class="gallery-thumb"
+              loading="lazy"
+            >
+            <figcaption class="gallery-overlay">
+              <span class="gallery-label" data-i18n="gallery.img5Title">Baklawa Feuilleté aux Pistaches</span>
+              <span class="gallery-sub" data-i18n="gallery.clickZoom">Cliquer pour agrandir</span>
+            </figcaption>
+          </figure>
+
+          <figure class="gallery-item item-wide" tabindex="0" role="button" aria-haspopup="dialog" data-index="5" aria-label="Agrandir la photo : Ambiance chaleureuse du restaurant">
+            <img 
+              src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=900&q=80" 
+              alt="Ambiance conviviale et chaleureuse du restaurant pour les familles et amis" 
+              class="gallery-thumb"
+              loading="lazy"
+            >
+            <figcaption class="gallery-overlay">
+              <span class="gallery-label" data-i18n="gallery.img6Title">Ambiance Conviviale &amp; Chaleureuse</span>
+              <span class="gallery-sub" data-i18n="gallery.clickZoom">Cliquer pour agrandir</span>
+            </figcaption>
+          </figure>
+        </div>
+
+        <p class="gallery-disclaimer" data-i18n="gallery.disclaimer">
+          * Les photographies de présentation illustrent le style de cuisine méditerranéenne et l'esprit culinaire de notre établissement.
+        </p>
+      </div>
+    </section>
+
+    <!-- 7. Interactive Reservation Section -->
+    <section class="reservation-section" id="reservation" aria-labelledby="res-heading">
+      <div class="section-container">
+        <div class="reservation-card-wrapper">
+          <div class="reservation-intro text-center">
+            <div class="accent-line mx-auto" aria-hidden="true"></div>
+            <span class="section-eyebrow" data-i18n="res.eyebrow">TABLE &amp; CONVIVIALITÉ</span>
+            <h2 class="section-title" id="res-heading" data-i18n="res.title">
+              Réservez votre table
+            </h2>
+            <p class="section-subtitle" data-i18n="res.subtitle">
+              Effectuez votre demande de réservation directement en ligne. Notre équipe vous répondra dans les meilleurs délais pour confirmer votre table.
+            </p>
+
+            <div class="res-notice-badge">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+              <span data-i18n="res.confirmationNotice">
+                Demande de réservation en ligne · Soumise à la validation de l'équipe du restaurant.
+              </span>
+            </div>
+          </div>
+
+          <!-- Interactive Booking Form -->
+          <form class="reservation-form" id="reservation-form" novalidate>
+            <div class="form-grid">
+              
+              <!-- Full Name -->
+              <div class="form-group">
+                <label for="res-name" class="form-label">
+                  <span data-i18n="res.nameLabel">Nom complet</span>
+                  <span class="required-star" aria-hidden="true">*</span>
+                </label>
+                <input 
+                  type="text" 
+                  id="res-name" 
+                  name="fullName" 
+                  class="form-input" 
+                  placeholder="ex. Jean Dupont" 
+                  required 
+                  autocomplete="name"
+                  aria-describedby="err-name"
+                >
+                <div class="form-error-msg" id="err-name" role="alert" aria-live="polite"></div>
+              </div>
+
+              <!-- Email Address -->
+              <div class="form-group">
+                <label for="res-email" class="form-label">
+                  <span data-i18n="res.emailLabel">Adresse email</span>
+                  <span class="required-star" aria-hidden="true">*</span>
+                </label>
+                <input 
+                  type="email" 
+                  id="res-email" 
+                  name="email" 
+                  class="form-input" 
+                  placeholder="ex. jean.dupont@email.com" 
+                  required 
+                  autocomplete="email"
+                  aria-describedby="err-email"
+                >
+                <div class="form-error-msg" id="err-email" role="alert" aria-live="polite"></div>
+              </div>
+
+              <!-- Phone Number -->
+              <div class="form-group">
+                <label for="res-phone" class="form-label">
+                  <span data-i18n="res.phoneLabel">Numéro de téléphone</span>
+                  <span class="required-star" aria-hidden="true">*</span>
+                </label>
+                <input 
+                  type="tel" 
+                  id="res-phone" 
+                  name="phone" 
+                  class="form-input" 
+                  placeholder="ex. 06 12 34 56 78" 
+                  required 
+                  autocomplete="tel"
+                  aria-describedby="err-phone"
+                >
+                <div class="form-error-msg" id="err-phone" role="alert" aria-live="polite"></div>
+              </div>
+
+              <!-- Number of Guests -->
+              <div class="form-group">
+                <label for="res-guests" class="form-label">
+                  <span data-i18n="res.guestsLabel">Nombre de convives</span>
+                  <span class="required-star" aria-hidden="true">*</span>
+                </label>
+                <select id="res-guests" name="guests" class="form-select" required aria-describedby="err-guests">
+                  <option value="" disabled selected data-i18n="res.guestsSelect">Sélectionnez le nombre de personnes</option>
+                  <option value="1">1 personne</option>
+                  <option value="2">2 personnes</option>
+                  <option value="3">3 personnes</option>
+                  <option value="4">4 personnes</option>
+                  <option value="5">5 personnes</option>
+                  <option value="6">6 personnes</option>
+                  <option value="7">7 personnes</option>
+                  <option value="8">8 personnes</option>
+                  <option value="9">9+ personnes (groupe)</option>
+                </select>
+                <div class="form-error-msg" id="err-guests" role="alert" aria-live="polite"></div>
+              </div>
+
+              <!-- Reservation Date -->
+              <div class="form-group">
+                <label for="res-date" class="form-label">
+                  <span data-i18n="res.dateLabel">Date souhaitée</span>
+                  <span class="required-star" aria-hidden="true">*</span>
+                </label>
+                <input 
+                  type="date" 
+                  id="res-date" 
+                  name="reservationDate" 
+                  class="form-input" 
+                  required 
+                  aria-describedby="err-date"
+                >
+                <div class="form-error-msg" id="err-date" role="alert" aria-live="polite"></div>
+              </div>
+
+              <!-- Preferred Time -->
+              <div class="form-group">
+                <label for="res-time" class="form-label">
+                  <span data-i18n="res.timeLabel">Heure souhaitée</span>
+                  <span class="required-star" aria-hidden="true">*</span>
+                </label>
+                <select id="res-time" name="reservationTime" class="form-select" required aria-describedby="err-time">
+                  <option value="" disabled selected data-i18n="res.timeSelect">Sélectionnez un horaire</option>
+                  <optgroup label="Service du midi" data-i18n-label="res.optLunch">
+                    <option value="11:45">11:45</option>
+                    <option value="12:00">12:00</option>
+                    <option value="12:30">12:30</option>
+                    <option value="13:00">13:00</option>
+                    <option value="13:30">13:30</option>
+                    <option value="14:00">14:00</option>
+                  </optgroup>
+                  <optgroup label="Service du soir" data-i18n-label="res.optDinner">
+                    <option value="18:45">18:45</option>
+                    <option value="19:00">19:00</option>
+                    <option value="19:30">19:30</option>
+                    <option value="20:00">20:00</option>
+                    <option value="20:30">20:30</option>
+                    <option value="21:00">21:00</option>
+                    <option value="21:30">21:30</option>
+                    <option value="22:00">22:00</option>
+                  </optgroup>
+                </select>
+                <div class="form-error-msg" id="err-time" role="alert" aria-live="polite"></div>
+              </div>
+
+              <!-- Dietary Requirements (Optional) -->
+              <div class="form-group form-col-full">
+                <label for="res-dietary" class="form-label">
+                  <span data-i18n="res.dietLabel">Régime ou allergies alimentaires (facultatif)</span>
+                </label>
+                <input 
+                  type="text" 
+                  id="res-dietary" 
+                  name="dietary" 
+                  class="form-input" 
+                  placeholder="ex. Végétarien, sans gluten, sans fruits à coque..."
+                >
+              </div>
+
+              <!-- Special Requests (Optional) -->
+              <div class="form-group form-col-full">
+                <label for="res-notes" class="form-label">
+                  <span data-i18n="res.notesLabel">Demandes particulières (facultatif)</span>
+                </label>
+                <textarea 
+                  id="res-notes" 
+                  name="notes" 
+                  class="form-textarea" 
+                  rows="3" 
+                  placeholder="Anniversaire, table au calme, chaise haute pour enfant..."
+                ></textarea>
+              </div>
+
+              <!-- Privacy Consent Checkbox -->
+              <div class="form-group form-col-full consent-group">
+                <label class="checkbox-container">
+                  <input type="checkbox" id="res-consent" name="consent" required aria-describedby="err-consent">
+                  <span class="custom-checkbox" aria-hidden="true"></span>
+                  <span class="consent-text" data-i18n="res.consentText">
+                    J'accepte que mes coordonnées soient utilisées uniquement par Restaurant Istanbul dans le cadre de cette demande de réservation.
+                  </span>
+                </label>
+                <div class="form-error-msg" id="err-consent" role="alert" aria-live="polite"></div>
+              </div>
+
+            </div>
+
+            <!-- Submit Button & Live Feedback -->
+            <div class="form-submit-wrapper">
+              <button type="submit" class="btn btn-terracotta btn-submit" id="res-submit-btn">
+                <span class="btn-spinner" aria-hidden="true"></span>
+                <span class="btn-text" data-i18n="res.btnSubmit">Envoyer la demande de réservation</span>
+              </button>
+            </div>
+          </form>
+
+          <!-- Accessible Confirmation Box (Hidden initially) -->
+          <div class="reservation-success-box" id="reservation-success" hidden tabindex="-1" role="status">
+            <div class="success-icon-wrap">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+            </div>
+            <h3 class="success-title" data-i18n="res.successTitle">Demande de réservation reçue avec succès !</h3>
+            <p class="success-lead" data-i18n="res.successLead">
+              Merci pour votre confiance. Votre demande a bien été enregistrée sous la référence ci-dessous :
+            </p>
+            <div class="success-reference">
+              <span data-i18n="res.refLabel">Numéro de demande :</span>
+              <strong id="success-ref-num">IST-2026-0000</strong>
+            </div>
+            <div class="success-recap" id="success-recap-details">
+              <!-- Filled via JavaScript with submitted details -->
+            </div>
+            <p class="success-subtext" data-i18n="res.successNotice">
+              Notre équipe à Dreux vérifiera la disponibilité et prendra contact avec vous par téléphone ou SMS pour confirmer définitivement votre table.
+            </p>
+            <div class="success-actions">
+              <button type="button" class="btn btn-secondary" id="btn-new-reservation" data-i18n="res.btnNew">Faire une autre demande</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. Location & Contact Section -->
+    <section class="contact-section" id="contact" aria-labelledby="contact-heading">
+      <div class="section-container">
+        <div class="contact-grid">
+          
+          <!-- Contact Information Column -->
+          <div class="contact-info-col">
+            <div class="accent-line" aria-hidden="true"></div>
+            <span class="section-eyebrow" data-i18n="contact.eyebrow">NOUS TROUVER</span>
+            <h2 class="section-title" id="contact-heading" data-i18n="contact.title">
+              Restaurant Istanbul à Dreux
+            </h2>
+            <p class="contact-description" data-i18n="contact.desc">
+              Situé au cœur de Dreux, notre établissement vous accueille chaleureusement pour un moment gourmand et convivial.
+            </p>
+
+            <div class="contact-details">
+              <div class="contact-item">
+                <div class="contact-icon-box">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                </div>
+                <div class="contact-text">
+                  <h3 data-i18n="contact.addressTitle">Adresse</h3>
+                  <address class="contact-address">
+                    <strong>Restaurant Istanbul</strong><br>
+                    3 rue Saint-Thibault<br>
+                    28100 Dreux, France
+                  </address>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-icon-box">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                </div>
+                <div class="contact-text">
+                  <h3 data-i18n="contact.hoursTitle">Horaires d'ouverture</h3>
+                  <p data-i18n="contact.hoursDesc">Ouvert 7j/7 pour les services du midi et du soir. Commandes à emporter et service sur place.</p>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-icon-box">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 8h1a4 4 0 0 1 0 8h-1"></path><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path><line x1="6" y1="1" x2="6" y2="4"></line><line x1="10" y1="1" x2="10" y2="4"></line><line x1="14" y1="1" x2="14" y2="4"></line></svg>
+                </div>
+                <div class="contact-text">
+                  <h3 data-i18n="contact.servicesTitle">Services</h3>
+                  <p data-i18n="contact.servicesDesc">Restauration sur place, plats à emporter, formules midi et menus enfants.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- External Navigation Link -->
+            <div class="contact-actions">
+              <a 
+                href="https://www.google.com/maps/search/?api=1&query=Restaurant+Istanbul+3+rue+Saint-Thibault+28100+Dreux" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class="btn btn-terracotta"
+                data-i18n="contact.btnMap"
+              >
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="3 11 22 2 13 21 11 13 3 11"></polygon></svg>
+                <span>Ouvrir dans Google Maps</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Stylized Map Column -->
+          <div class="contact-map-col">
+            <div class="map-frame">
+              <!-- OpenStreetMap embed centered on 3 Rue Saint-Thibault, Dreux -->
+              <iframe 
+                title="Carte d'accès - Restaurant Istanbul Dreux" 
+                src="https://www.openstreetmap.org/export/embed.html?bbox=1.3620%2C48.7340%2C1.3720%2C48.7395&amp;layer=mapnik&amp;marker=48.7369%2C1.3672" 
+                class="map-iframe"
+                loading="lazy"
+                aria-label="Carte interactive de localisation au 3 rue Saint-Thibault, 28100 Dreux"
+              ></iframe>
+              <div class="map-overlay-badge">
+                <strong>Restaurant Istanbul</strong>
+                <span>3 rue Saint-Thibault, 28100 Dreux</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="section-container">
+      <div class="footer-top-grid">
+        
+        <!-- Brand & Slogan -->
+        <div class="footer-col brand-col">
+          <span class="footer-brand-title">ISTANBUL</span>
+          <p class="footer-brand-sub" data-i18n="footer.cuisine">Cuisine Turque &amp; Méditerranéenne · Dreux</p>
+          <p class="footer-address-text">
+            3 rue Saint-Thibault<br>
+            28100 Dreux, France
+          </p>
+          <div class="footer-cta-wrap">
+            <a href="#reservation" class="btn btn-terracotta btn-sm" data-i18n="footer.btnBook">Réserver une table</a>
+          </div>
+        </div>
+
+        <!-- Quick Navigation -->
+        <div class="footer-col">
+          <h3 class="footer-heading" data-i18n="footer.navTitle">Navigation</h3>
+          <ul class="footer-nav-list">
+            <li><a href="#accueil" data-i18n="nav.home">Accueil</a></li>
+            <li><a href="#cuisine" data-i18n="nav.cuisine">Notre cuisine</a></li>
+            <li><a href="#menu" data-i18n="nav.menu">Menu &amp; Spécialités</a></li>
+            <li><a href="#galerie" data-i18n="nav.gallery">Galerie photos</a></li>
+            <li><a href="#reservation" data-i18n="nav.reservation">Réservation</a></li>
+            <li><a href="#contact" data-i18n="nav.contact">Nous trouver</a></li>
+          </ul>
+        </div>
+
+        <!-- Practical Info -->
+        <div class="footer-col">
+          <h3 class="footer-heading" data-i18n="footer.infoTitle">Informations</h3>
+          <ul class="footer-info-list">
+            <li><span data-i18n="footer.infoAddress">Adresse :</span> 3 rue Saint-Thibault, 28100 Dreux</li>
+            <li><span data-i18n="footer.infoFormula">Formules :</span> Midi &amp; Soir</li>
+            <li><span data-i18n="footer.infoService">Options :</span> Sur place &amp; À emporter</li>
+            <li>
+              <a href="https://www.google.com/maps/search/?api=1&query=Restaurant+Istanbul+3+rue+Saint-Thibault+28100+Dreux" target="_blank" rel="noopener noreferrer" class="footer-map-link" data-i18n="footer.itinerary">
+                Itinéraire Google Maps &rarr;
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Legal & Commitment -->
+        <div class="footer-col">
+          <h3 class="footer-heading" data-i18n="footer.legalTitle">Transparence</h3>
+          <p class="footer-legal-desc" data-i18n="footer.legalDesc">
+            Restaurant Istanbul vous propose des spécialités turques faites dans le respect des traditions.
+          </p>
+          <div class="footer-legal-links">
+            <button type="button" class="legal-modal-trigger" id="btn-open-mentions" data-i18n="footer.mentions">Mentions Légales</button>
+            <span aria-hidden="true">•</span>
+            <button type="button" class="legal-modal-trigger" id="btn-open-privacy" data-i18n="footer.privacy">Politique de Confidentialité</button>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom-bar">
+        <p class="copyright-text">
+          &copy; <span id="current-year">2026</span> Restaurant Istanbul. <span data-i18n="footer.allRights">Tous droits réservés.</span>
+        </p>
+        <p class="footer-credit" data-i18n="footer.credit">
+          Cuisine turque et méditerranéenne au cœur de Dreux.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Lightbox Modal for Photo Gallery -->
+  <dialog class="lightbox-modal" id="lightbox-modal" aria-label="Visualiseur d'image grand format">
+    <div class="lightbox-dialog-inner">
+      <button type="button" class="lightbox-close-btn" id="lightbox-close" aria-label="Fermer l'image agrandie">&times;</button>
+      
+      <div class="lightbox-figure-wrap">
+        <img src="" alt="" class="lightbox-main-img" id="lightbox-img">
+        <div class="lightbox-info-bar">
+          <p class="lightbox-caption" id="lightbox-caption"></p>
+          <span class="lightbox-counter" id="lightbox-counter">1 / 6</span>
+        </div>
+      </div>
+
+      <!-- Navigation Arrows -->
+      <button type="button" class="lightbox-nav-btn btn-prev" id="lightbox-prev" aria-label="Image précédente">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"></polyline></svg>
+      </button>
+      <button type="button" class="lightbox-nav-btn btn-next" id="lightbox-next" aria-label="Image suivante">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg>
+      </button>
+    </div>
+  </dialog>
+
+  <!-- Legal Mentions Modal -->
+  <dialog class="info-modal" id="modal-mentions" aria-labelledby="mentions-title">
+    <div class="info-modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title" id="mentions-title" data-i18n="modal.mentionsTitle">Mentions Légales</h3>
+        <button type="button" class="modal-close-btn" aria-label="Fermer la fenêtre">&times;</button>
+      </div>
+      <div class="modal-body">
+        <h4>Éditeur du site</h4>
+        <p>
+          <strong>Restaurant Istanbul</strong><br>
+          Adresse : 3 rue Saint-Thibault, 28100 Dreux, France<br>
+          Activité : Restauration de type rapide et traditionnelle turque
+        </p>
+        <h4>Directeur de la publication</h4>
+        <p>Direction Restaurant Istanbul Dreux</p>
+        <h4>Hébergement</h4>
+        <p>Site hébergé sur des serveurs sécurisés conformes aux normes européennes.</p>
+        <h4>Propriété intellectuelle</h4>
+        <p>Les éléments textuels, visuels et graphiques du site sont la propriété exclusive de Restaurant Istanbul. Toute reproduction sans accord préalable est interdite.</p>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- Privacy Policy Modal -->
+  <dialog class="info-modal" id="modal-privacy" aria-labelledby="privacy-title">
+    <div class="info-modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title" id="privacy-title" data-i18n="modal.privacyTitle">Politique de Confidentialité</h3>
+        <button type="button" class="modal-close-btn" aria-label="Fermer la fenêtre">&times;</button>
+      </div>
+      <div class="modal-body">
+        <h4>Protection des données personnelles (RGPD)</h4>
+        <p>Restaurant Istanbul s'engage à ce que la collecte et le traitement de vos données soient conformes au Règlement Général sur la Protection des Données (RGPD).</p>
+        <h4>Données collectées via le formulaire de réservation</h4>
+        <p>Les informations demandées (nom, email, téléphone, date, heure, nombre de personnes) sont strictement nécessaires au traitement et à la confirmation de votre demande de réservation.</p>
+        <h4>Conservation et sécurité</h4>
+        <p>Vos coordonnées ne font l'objet d'aucune revente commerciale ni de cession à des tiers. Elles ne sont pas conservées au-delà du temps requis pour la gestion du service.</p>
+        <h4>Cookies</h4>
+        <p>Ce site n'utilise que des fonctionnalités locales nécessaires à votre confort de navigation (ex. mémorisation du choix de langue FR/EN). Aucun cookie publicitaire n'est déposé.</p>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
